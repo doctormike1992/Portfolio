@@ -1,0 +1,54 @@
+@mixin flexing($row, $justify,) {
+  display: flex;
+  flex-direction: $row;
+  align-items: center;
+  justify-content: $justify;
+}
+$h1Background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+$underlineBackground: linear-gradient(
+  45deg,
+  #667eea,
+  #764ba2,
+  rgb(109, 28, 98)
+);
+
+#about {
+  @include flexing(column, center);
+  width: 100%;
+  height: fit-content;
+  #aboutMe {
+    @include flexing(column, center);
+    h1 {
+      background: $h1Background;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 3rem;
+    }
+    #aboutUnder {
+      height: 0.2rem;
+      background: $underlineBackground;
+      margin-top: 1rem;
+      animation: underScroll 0.8s ease;
+      animation-timeline: view();
+      animation-range: entry 0% cover 100%;
+      @keyframes underScroll {
+        from {
+          width: 0;
+        }
+        to {
+          width: 9rem;
+        }
+      }
+    }
+  }
+  #aboutPara {
+    max-width: 30%;
+    p {
+      margin: 3rem 0;
+      font-size: 1.3rem;
+      color: #94949b;
+      text-align: center;
+    }
+  }
+}

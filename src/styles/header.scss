@@ -1,0 +1,192 @@
+$navBorder: linear-gradient(
+  90deg,
+  rgb(89, 32, 143),
+  rgb(158, 24, 151) 70%,
+  rgba(161, 17, 77, 0.041) 95%
+);
+$h1Background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0;
+  position: fixed;
+  transition: all 0.2s ease;
+  top: 0;
+  h1 {
+    transition: all 0.1s ease-in-out;
+  }
+  h1:hover {
+    scale: 1.1;
+  }
+  .h1 {
+    color: transparent;
+    background: $h1Background;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 1.9rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  button {
+    display: none;
+  }
+  .navBorder {
+    width: 100%;
+    min-height: 1px;
+    display: none;
+  }
+  .openNav {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    column-gap: clamp(0.5rem, 3vw, 2rem);
+    a {
+      font-size: clamp(0.8rem, 3vw, 1.1rem);
+      color: rgb(230, 226, 226);
+      font-weight: 300;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -20%;
+        transition: all 0.2s ease-in-out;
+        width: 0;
+        height: 2px;
+        background: $h1Background;
+      }
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 785px) {
+    justify-content: space-between;
+    padding: 0 0.5rem;
+  }
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    align-items: start;
+    height: fit-content;
+    padding: 0.5rem 0.9rem;
+    row-gap: 1rem;
+    #head {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 1rem;
+      button {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        background: transparent;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        .burger1 {
+          display: block;
+          width: 1.8rem;
+          height: 0.2rem;
+          background-color: white;
+          border-radius: 2px;
+          transition: all 0.2s ease;
+        }
+        .burger2 {
+          display: block;
+          width: 1.8rem;
+          height: 0.2rem;
+          background-color: white;
+          border-radius: 2px;
+          transition: all 0.2s ease;
+        }
+        .burger3 {
+          display: block;
+          width: 1.8rem;
+          height: 0.2rem;
+          background-color: white;
+          border-radius: 2px;
+          transition: all 0.2s ease;
+        }
+        .burger1close {
+          transform: rotate(44deg) translateX(-2px);
+          transform-origin: left;
+          display: block;
+          width: 1.8rem;
+          height: 0.2rem;
+          background-color: white;
+          border-radius: 2px;
+          transition: all 0.2s ease;
+        }
+        .burger2close {
+          display: inline-block;
+          width: 0;
+          height: 0.2rem;
+          background-color: white;
+          border-radius: 2px;
+        }
+        .burger3close {
+          transform: rotate(-45deg) translateX(-1px);
+          transition: all 0.2s ease;
+          transform-origin: left;
+          display: inline-block;
+          width: 1.8rem;
+          height: 0.2rem;
+          background-color: white;
+          border-radius: 2px;
+        }
+      }
+    }
+    .navBorder {
+      display: inline-block;
+      background: $navBorder;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: all 0.3s ease-in-out;
+    }
+    .openNav {
+      flex-direction: column;
+      row-gap: 1.3rem;
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.8s ease-in-out;
+      .openA {
+        font-size: 1.1rem;
+        width: fit-content;
+        transition:
+          opacity 0.4s ease-in-out,
+          transform 0.3s ease-in-out;
+        transform: translateX(0%);
+        opacity: 1;
+      }
+    }
+    .openBorder {
+      width: 0;
+    }
+    .closeNav {
+      height: 0;
+      opacity: 0;
+    }
+  }
+  .closeA {
+    transform: translateX(-30%);
+    opacity: 0;
+    font-size: 1.1rem;
+  }
+}
+.fixed {
+  background: rgba(0, 0, 0, 0.404);
+  transform: translateY(-4px);
+  transition: all 0.4s ease-in-out;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 12px 1px black;
+  z-index: 10;
+}
