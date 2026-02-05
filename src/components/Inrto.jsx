@@ -5,11 +5,19 @@ import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin.svg";
 import email from "../assets/email.svg";
 import phone from "../assets/phone.svg";
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'motion/react';
 
 export default function Intro() {
   return (
     <section id="intro">
-      <div id="introDiv">
+      <motion.div
+        initial={{ y: 10, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        id="introDiv"
+      >
         <main>
           <div id="available">
             <span></span>
@@ -38,7 +46,10 @@ export default function Intro() {
               </a>
             </div>
             <div className="icon">
-              <a href="https://www.linkedin.com/in/%CE%BC%CE%B9%CF%87%CE%B1%CE%BB%CE%B7%CF%82-%CF%80%CF%81%CE%B9%CF%86%CF%84%CE%B7%CF%82-110005323/" target='_blank'>
+              <a
+                href="https://www.linkedin.com/in/%CE%BC%CE%B9%CF%87%CE%B1%CE%BB%CE%B7%CF%82-%CF%80%CF%81%CE%B9%CF%86%CF%84%CE%B7%CF%82-110005323/"
+                target="_blank"
+              >
                 <img src={linkedin} alt="linkedin logo" />
               </a>
             </div>
@@ -54,7 +65,7 @@ export default function Intro() {
             </div>
           </div>
         </main>
-      </div>
+      </motion.div>
       <div id="imgDiv">
         <div id="img" style={{ backgroundImage: `url(${image})` }}></div>
       </div>

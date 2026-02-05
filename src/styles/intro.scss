@@ -50,20 +50,7 @@
     main{
       @include flexing(column,center );
       width: 50%;
-      & > div{
-        animation: srollIntro 1s ease forwards;
-      @keyframes srollIntro {
-        from{
-          transform: translateY(15%);
-          opacity: 0;
-        }
-        to{
-           transform: translateY(0%);
-           opacity: 1;
-        }
-      }
-      
-      }
+
       #available {
       background: #657efc41;
       padding: 0.6rem 1.75rem;

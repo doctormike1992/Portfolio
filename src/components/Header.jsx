@@ -41,11 +41,10 @@ export default function Header() {
       <div className={nav ? "navBorder" : "openBorder"}></div>
       {small ? (
         <nav className={nav ? "openNav" : "closeNav"}>
-          
           <a
             className={nav ? "openA" : "closeA"}
             style={{ transitionDelay: "0.1s" }}
-            href=""
+            href="#about"
           >
             About
           </a>
@@ -87,7 +86,7 @@ export default function Header() {
         </nav>
       ) : (
         <nav className="openNav">
-          <a href="">About</a>
+          <a href="#about">About</a>
           <a href="">Skills</a>
           <a href="">Projects</a>
           <a href="">Education</a>

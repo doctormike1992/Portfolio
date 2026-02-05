@@ -9,11 +9,18 @@ export default function About() {
       initial={{ y: 40, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       id="about"
     >
       <div id="aboutMe">
         <h1>About Me</h1>
-        <div id="aboutUnder"></div>
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: 100 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          id="aboutUnder"
+        ></motion.div>
       </div>
       <div id="aboutPara">
         <p>

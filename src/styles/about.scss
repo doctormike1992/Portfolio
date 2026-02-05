@@ -29,17 +29,6 @@ $underlineBackground: linear-gradient(
       height: 0.2rem;
       background: $underlineBackground;
       margin-top: 1rem;
-      animation: underScroll 0.8s ease;
-      animation-timeline: view();
-      animation-range: entry 0% cover 100%;
-      @keyframes underScroll {
-        from {
-          width: 0;
-        }
-        to {
-          width: 9rem;
-        }
-      }
     }
   }
   #aboutPara {
