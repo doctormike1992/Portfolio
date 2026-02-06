@@ -7,184 +7,217 @@
 
 #intro {
   @include flexing(row, center);
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   color: white;
   gap: 2rem;
+  overflow-y: hidden;
   #imgDiv {
     width: 100%;
     @include flexing(row, start);
     #img {
       width: 25rem;
-      height: 25rem;
+      max-width: 90%;
+      height: auto;
       border-radius: 50%;
+      aspect-ratio: 1/1;
       background-position: center;
       background-size: cover;
       box-shadow: 0px 0px 40px 1px rgb(32, 187, 187);
-      animation: glow 5s ease-in-out infinite, imgGrow 1s ease forwards;
+      animation:
+        glow 5s ease-in-out infinite,
+        imgGrow 1s ease-out forwards;
       filter: brightness(1.2);
     }
-      @keyframes glow {
-        0% {
-          box-shadow: 0px 0px 20px 1px rgb(32, 187, 187);
-          transform: translateY(-5%);
-        }
-        50% {
-          box-shadow: 0px 0px 70px 1px rgb(117, 32, 187);
-          transform: translateY(5%);
-          
-        }
-        100% {
-          box-shadow: 0px 0px 20px 1px rgb(32, 187, 187);
-          transform: translateY(-5%);
-        }
+    @keyframes glow {
+      0% {
+        box-shadow: 0px 0px 20px 1px rgb(32, 187, 187);
+        transform: translateY(-5%);
       }
-      @keyframes imgGrow {
-        from { scale: 0}
-        to {scale: 1;}
+      50% {
+        box-shadow: 0px 0px 70px 1px rgb(117, 32, 187);
+        transform: translateY(5%);
       }
+      100% {
+        box-shadow: 0px 0px 20px 1px rgb(32, 187, 187);
+        transform: translateY(-5%);
+      }
+    }
+    @keyframes imgGrow {
+      from {
+        scale: 0.5;
+        opacity: 0.5;
+      }
+      to {
+        scale: 1;
+        opacity: 1;
+      }
+    }
   }
   #introDiv {
     width: 100%;
     @include flexing(row, end);
-    main{
-      @include flexing(column,center );
-      width: 50%;
+    main {
+      @include flexing(column, center);
+      width: 90%;
+      @media screen and (min-width: 2210px) {
+        width: 50%;
+      }
 
       #available {
-      background: #657efc41;
-      padding: 0.6rem 1.75rem;
-      border: 2px solid #8296fa7c;
-      border-radius: 40px;
-      color: #8296fa;
-      font-size: 1rem;
-      font-weight: 500;
-      margin-bottom: 2rem;
+        background: #657efc41;
+        padding: 0.6rem 1.75rem;
+        border: 2px solid #8296fa7c;
+        border-radius: 40px;
+        color: #8296fa;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: clamp(1rem,2vw,2rem);
+        span {
+          display: inline-block;
+          width: 0.8rem;
+          height: 0.8rem;
+          background-color: #8296fa;
+          border-radius: 50%;
+          margin-right: 0.7rem;
+          animation: beep 3s infinite;
+          @keyframes beep {
+            0%,
+            100% {
+              background-color: #8296fa;
+            }
+            50% {
+              background-color: #3859ff;
+              box-shadow: 0 0 5px 1px #3859ff;
+            }
+          }
+        }
+      }
+    }
+
+    #name {
+      font-size: clamp(2rem, 12vw, 5rem);
+      font-weight: 800;
+      text-align: center;
       span {
-        display: inline-block;
-        width: 0.8rem;
-        height: 0.8rem;
-        background-color: #8296fa;
-        border-radius: 50%;
-        margin-right: 0.7rem;
-        animation: beep 3s infinite;
-        @keyframes beep {
-          0%,
+        margin-top: -20px;
+        background: linear-gradient(
+          135deg,
+          #667eea,
+          #764ba2,
+          rgb(160, 71, 130)
+        );
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: name-anim 5s ease-in-out infinite alternate;
+        @keyframes name-anim {
+          0% {
+            background-position: left;
+          }
           100% {
-            background-color: #8296fa;
-          }
-          50% {
-            background-color: #3859ff;
-            box-shadow: 0 0 5px 1px #3859ff;
+            background-position: right;
           }
         }
-      }
-    }
-  }
-
-  #name {
-    font-size: 5rem;
-    font-weight: 800;
-    text-align: center;    
-    span {
-      display: block;
-      margin-top: -20px;
-      background: linear-gradient(135deg, #667eea, #764ba2, rgb(160, 71, 130) );
-      background-size: 200%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      animation: name-anim 5s ease-in-out infinite alternate;
-      @keyframes name-anim {
-        0%{
-          background-position: left ;
-        }
-        100% {
-          background-position: right ;
+        @media screen and (min-width: 1441px) {
+          display: block;
         }
       }
     }
-  }
 
-  #title{
-    color: #b2b2bb;
-    font-size: 1.75rem;
-    font-weight: 600;
-    margin: 1.5rem 0;
-  }
-
-  #description{
-    font-size: 1.1rem;
-    color: #a1a1aa;
-    text-wrap: wrap;
-    max-width: 450px;
-    text-align: center;
-    line-height: 1.5rem;
-    letter-spacing: 0.4px;
-  }
-
-  #location{
-  @include flexing(row, center);
-  color: #808392;
-  font-size: 1.2rem;
-  margin: 1rem 0;
-  gap: .5rem;
-    img{
-      width: 1.2rem;
-      fill: currentColor;
+    #title {
+      color: #b2b2bb;
+      font-size: clamp(1rem, 7vw, 1.75rem);
+      font-weight: 600;
+      margin: clamp(1.2rem,2vw,1.5rem) 0;
     }
-  }
 
-  #getInTouch{
-    margin: 3rem 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-    background: linear-gradient(135deg, #667eea , #764ba2 );
-    padding: 1.2rem 1.6rem;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 0 0 8px 0px #667eea;
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    &:hover{
-    box-shadow: 0 0 15px 1px #667eea;
-    transform: translateY(-5%);
+    #description {
+      font-size: 1.1rem;
+      color: #a1a1aa;
+      text-wrap: wrap;
+      max-width: 450px;
+      text-align: center;
+      line-height: 1.5rem;
+      letter-spacing: 0.4px;
     }
-    a{
-      color: #ffffff;
-      text-decoration: none;
-    }
-  }
 
-  #icons{
-    @include flexing(row, center);
-    gap: 2rem;
-    .icon{
-    @include flexing(row, center);
-    cursor: pointer;
-      width: 3rem;
-      height: 3rem;
-      background: rgba(128, 128, 128, 0.356);
-      border: .1rem solid rgba(255, 255, 255, 0.418);
-      border-radius: 50%;
-      transition: all 0.2s ease-out;
-      &:hover{
-        transform: translateY(-15%);
-        background:  #667eea4b;
-      border: .1rem solid #667eea;
-      }
-      a{
-    @include flexing(row, center);
-      }
-      img{
-        width: 50%;
-        height: 50%;
-        justify-self: center;
-        place-self: center;
+    #location {
+      @include flexing(row, center);
+      color: #808392;
+      font-size: 1.2rem;
+      margin: clamp(.8rem,2vw,1rem) 0;
+      gap: 0.5rem;
+      img {
+        width: 1.2rem;
+        fill: currentColor;
       }
     }
-    
-  }
+
+    #getInTouch {
+      margin: clamp(1.8rem,2vw,3rem) 0;
+      font-size: clamp(0.9rem, 5vw, 1.4rem);
+      font-weight: 600;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      padding: 1.2rem 1.6rem;
+      border-radius: 50px;
+      text-align: center;
+      box-shadow: 0 0 8px 0px #667eea;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        box-shadow: 0 0 15px 1px #667eea;
+        transform: translateY(-5%);
+      }
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
     }
-    
+
+    #icons {
+      @include flexing(row, center);
+      gap: 2rem;
+      .icon {
+        @include flexing(row, center);
+        cursor: pointer;
+        width: 3rem;
+        height: 3rem;
+        background: rgba(128, 128, 128, 0.356);
+        border: 0.1rem solid rgba(255, 255, 255, 0.418);
+        border-radius: 50%;
+        transition: all 0.2s ease-out;
+        &:hover {
+          transform: translateY(-15%);
+          background: #667eea4b;
+          border: 0.1rem solid #667eea;
+        }
+        a {
+          @include flexing(row, center);
+        }
+        img {
+          width: 50%;
+          height: 50%;
+          justify-self: center;
+          place-self: center;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    padding: 15% 0;
+  }
+  @media screen and (max-width: 1024px) {
+    @include flexing(column, center);
+    margin: 15% 0;
+    height: auto;
+    #imgDiv {
+      @include flexing(column, center);
+    }
+    #introDiv {
+      @include flexing(column, center);
+    }
+  }
 }

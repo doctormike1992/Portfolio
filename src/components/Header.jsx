@@ -31,18 +31,26 @@ export default function Header() {
     return () => media.removeEventListener("change", handler);
   }, []);
 
-
+  function handleHeaderClass() {
+    if (!small && headerClass) {
+      return "header fixed";
+    } else if (small) {
+      return "header fixed";
+    } else {
+      return "header";
+    };
+  }
   
 
 
   return (
     <header
       style={{ height: nav && small ? "370px" : "90px" }}
-      className={headerClass ? "header fixed" : "header"}
+      className={handleHeaderClass()}
     >
       <div id="head">
         <h1>
-          <a className="h1" href="#intro">
+          <a className="h1" href="#">
             MP
           </a>
         </h1>
