@@ -8,18 +8,32 @@ export default function Header() {
 
   useEffect(() => {
     const scrollTop = () => setHeaderClass(window.scrollY > 0);
-    const smallScreen = () => setSmall(window.innerWidth < 426);
 
+
+    
     window.addEventListener("scroll", scrollTop);
-    window.addEventListener("resize", smallScreen);
 
     scrollTop();
-    smallScreen();
+    
+
     return () => {
       window.removeEventListener("scroll", scrollTop);
-      window.removeEventListener("resize", smallScreen);
     };
   }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 490px)");
+
+    const handler = () => setSmall(media.matches);
+    handler(); 
+
+    media.addEventListener("change", handler);
+    return () => media.removeEventListener("change", handler);
+  }, []);
+
+
+  
+
 
   return (
     <header

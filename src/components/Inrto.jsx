@@ -12,10 +12,10 @@ export default function Intro() {
   return (
     <section id="intro">
       <motion.div
-        initial={{ y: 10, opacity: 0 }}
+        initial={{ y: 25, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.9, ease: "easeOut" }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
         id="introDiv"
       >
         <main>

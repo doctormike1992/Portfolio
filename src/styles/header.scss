@@ -48,7 +48,7 @@ $h1Background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
     a {
       font-size: clamp(0.8rem, 3vw, 1.1rem);
       color: rgb(230, 226, 226);
-      font-weight: 300;
+      font-weight: 500;
       position: relative;
       &::before {
         content: "";
@@ -185,7 +185,7 @@ $h1Background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
 .fixed {
   background: rgba(0, 0, 0, 0.404);
   transform: translateY(-4px);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
   backdrop-filter: blur(10px);
   box-shadow: 0px 0px 12px 1px black;
   z-index: 10;
