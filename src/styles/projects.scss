@@ -1,0 +1,135 @@
+@mixin flexing($row, $align, $justify) {
+  display: flex;
+  flex-direction: $row;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+$h1Background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+$underlineBackground: linear-gradient(
+  45deg,
+  #667eea,
+  #764ba2,
+  rgb(109, 28, 98)
+);
+
+#projects {
+  @include flexing(column, center, center);
+  width: 100%;
+  gap: 4rem;
+  #projectsHeader {
+    @include flexing(column, center, center);
+    h1 {
+      background: $h1Background;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 3rem;
+      text-align: center;
+    }
+    #underline {
+      height: 0.2rem;
+      background: $underlineBackground;
+      margin-top: 1rem;
+    }
+  }
+  #projectsContainer {
+    @include flexing(row, center, center);
+    gap: 10rem;
+    flex-wrap: wrap;
+    .project {
+      @include flexing(column, start, start);
+      border-radius: 12px;
+      width: 25rem;
+      height: 30rem;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      background: rgb(37, 37, 37);
+      z-index: 1;
+      transition: transform .2s ease-out, box-shadow .1s ease-out;
+
+      &:first-child::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 50% 0;
+        z-index: -1;
+        background: linear-gradient(
+          135deg,
+          hsla(229, 76%, 66%, 0.418) 0%,
+          hsla(270, 37%, 46%, 0.418) 100%
+        );
+      }
+
+      &:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 50% 0;
+        z-index: -1;
+        background: linear-gradient(
+          135deg,
+          hsla(352, 89%, 65%, 0.418) 0%,
+          hsla(294, 93%, 78%, 0.418) 100%
+        );
+      }
+      &:nth-child(3)::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 50% 0;
+        z-index: -1;
+        background: linear-gradient(
+          135deg,
+          hsla(183, 100%, 50%, 0.418) 0%,
+          hsla(208, 99%, 65%, 0.418) 100%
+        );
+      }
+      &:hover{
+        filter: brightness(1.1);
+        box-shadow: 0 0 30px 5px #91a3ff;
+      }
+    
+      h1 {
+        color: white;
+        font-size: 1.7rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        margin-bottom: 1.7rem;
+      }
+      p {
+        color: #c7c7d1;
+        letter-spacing: 0.6px;
+        line-height: 23px;
+        margin-bottom: 2rem;
+      }
+      .technologies {
+        @include flexing(row, start, start);
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin: auto 0;
+        span {
+          color: #a5b4fc;
+          background-color: rgba(102, 126, 234, 0.15);
+          border: 1px solid rgba(102, 126, 234, 0.3);
+          padding: 0.4rem 1.2rem;
+          border-radius: 18px;
+          font-weight: 500;
+        }
+      }
+      button {
+        @include flexing(row, end, center);
+        color: #a5b4fc;
+        background-color: rgba(102, 126, 234, 0.15);
+        border: 1px solid rgba(102, 126, 234, 0.3);
+        padding: 0.7rem 1rem;
+        border-radius: 15px;
+        font-weight: 500;
+        font-size: 1.3rem;
+        gap: 0.4rem;
+        img {
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
+    }
+  }
+}

@@ -19,7 +19,7 @@ export default function Skills() {
     { skill: "React", span: "Framework" },
     { skill: "Tailwind CSS", span: "Styling" },
     { skill: "SCSS", span: "Styling" },
-    { skill: "REST APIs", span: "API" },
+    { skill: "Fetch APIs", span: "API" },
     { skill: "Git", span: "Tools" },
   ];
   return (
