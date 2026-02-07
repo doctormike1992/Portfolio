@@ -1,0 +1,78 @@
+$h1Background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+$underlineBackground: linear-gradient(
+  45deg,
+  #667eea,
+  #764ba2,
+  rgb(109, 28, 98)
+);
+
+@mixin flexing($row, $justify,) {
+  display: flex;
+  flex-direction: $row;
+  align-items: center;
+  justify-content: $justify;
+}
+
+#skills{
+  width: 100%;
+  place-items: center;
+  margin-top: 10%;
+  #skillsTech{
+    @include flexing(column,center );
+    h1{
+      background: $h1Background;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 3rem;
+      text-align: center;
+    }
+    #underline{
+      height: 0.2rem;
+      background: $underlineBackground;
+      margin-top: 1rem;
+    }
+    
+  }
+   #skillsGrid{
+      display: grid;
+      margin-top: 4rem;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: repeat(3,1fr);
+      gap: clamp(2rem,3vw,4.5rem);
+      @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2,1fr);
+       grid-template-rows: repeat(4,1fr);
+      }
+      @media screen and (max-width: 425px) {
+      grid-template-columns: repeat(1,1fr);
+       grid-template-rows: repeat(8,1fr);
+      }
+      .skill{
+        @include flexing(column, center);
+        background: rgba(63, 63, 63, 0.274);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 2rem 4rem;
+        border-radius: 20px;
+        gap: 1rem;
+        transition: all .1s ease-in-out;
+        &:hover{
+          border: 1px solid rgb(77, 62, 148);
+          box-shadow: 0 0 15px 1px rgb(77, 62, 148);
+        }
+        h1{
+          color: white;
+          font-size: 1.4rem;
+          text-align: center;
+        }
+        span{
+          color: rgb(179, 177, 177);
+          border: 1px solid rgb(70, 69, 69);
+          padding: .4rem .9rem;
+          border-radius: 10px;
+          font-weight: 300;
+          letter-spacing: 0.6px;
+        }
+      }
+    }
+}

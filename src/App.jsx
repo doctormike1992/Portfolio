@@ -3,6 +3,7 @@ import './App.scss'
 import Intro from './components/Inrto';
 import Stars from './components/Stars';
 import About from './components/About';
+import Skills from './components/Skills';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Stars />
       <Intro />
       <About />
+      <Skills />
     </>
   );
 }

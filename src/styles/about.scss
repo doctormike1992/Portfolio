@@ -16,6 +16,7 @@ $underlineBackground: linear-gradient(
   @include flexing(column, center);
   width: 100%;
   height: fit-content;
+  margin-top: 5%;
   #aboutMe {
     @include flexing(column, center);
     h1 {
