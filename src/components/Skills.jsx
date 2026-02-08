@@ -8,7 +8,7 @@ const container = {
 };
 const items = {
   hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0, ease: 'easeInOut', duration: 1.5 }
+  visible: { opacity: 1, y: 0, ease: 'easeInOut', duration: 0.8 }
 };
 
 export default function Skills() {

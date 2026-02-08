@@ -5,6 +5,9 @@
   justify-content: $justify;
 }
 
+$buttonBackground: rgba(102, 126, 234, 0.15);
+$buttonBorder: rgba(102, 126, 234, 0.3);
+$buttonColor: #a5b4fc;
 $h1Background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
 $underlineBackground: linear-gradient(
   45deg,
@@ -12,11 +15,25 @@ $underlineBackground: linear-gradient(
   #764ba2,
   rgb(109, 28, 98)
 );
+$background: (
+  linear-gradient(135deg, hsla(270, 37%, 46%, 0.712) 30%, rgb(37, 37, 37) 100%),
+  linear-gradient(135deg, hsla(190, 95%, 30%, 0.712) 30%, rgb(37, 37, 37) 100%),
+  linear-gradient(135deg, hsla(208, 99%, 30%, 0.712) 30%, rgb(37, 37, 37) 100%)
+);
+
+@each $bg in $background {
+  $i: index($background, $bg);
+
+  .project:nth-child(#{$i}) {
+    background: $bg;
+  }
+}
 
 #projects {
   @include flexing(column, center, center);
   width: 100%;
   gap: 4rem;
+  margin-top: 10%;
   #projectsHeader {
     @include flexing(column, center, center);
     h1 {
@@ -45,49 +62,17 @@ $underlineBackground: linear-gradient(
       padding: 2rem;
       position: relative;
       overflow: hidden;
-      background: rgb(37, 37, 37);
+      background-size: 200%;
+      background-position: 100% 100%;
       z-index: 1;
-      transition: transform .2s ease-out, box-shadow .1s ease-out;
-
-      &:first-child::before {
-        content: "";
-        position: absolute;
-        inset: 0 0 50% 0;
-        z-index: -1;
-        background: linear-gradient(
-          135deg,
-          hsla(229, 76%, 66%, 0.418) 0%,
-          hsla(270, 37%, 46%, 0.418) 100%
-        );
-      }
-
-      &:nth-child(2)::before {
-        content: "";
-        position: absolute;
-        inset: 0 0 50% 0;
-        z-index: -1;
-        background: linear-gradient(
-          135deg,
-          hsla(352, 89%, 65%, 0.418) 0%,
-          hsla(294, 93%, 78%, 0.418) 100%
-        );
-      }
-      &:nth-child(3)::before {
-        content: "";
-        position: absolute;
-        inset: 0 0 50% 0;
-        z-index: -1;
-        background: linear-gradient(
-          135deg,
-          hsla(183, 100%, 50%, 0.418) 0%,
-          hsla(208, 99%, 65%, 0.418) 100%
-        );
-      }
-      &:hover{
+      transition:
+        background-size 0.3s ease-out,
+        box-shadow 0.1s ease-out;
+      &:hover {
         filter: brightness(1.1);
-        box-shadow: 0 0 30px 5px #91a3ff;
+        background-size: 100%;
       }
-    
+
       h1 {
         color: white;
         font-size: 1.7rem;
@@ -107,24 +92,32 @@ $underlineBackground: linear-gradient(
         flex-wrap: wrap;
         margin: auto 0;
         span {
-          color: #a5b4fc;
-          background-color: rgba(102, 126, 234, 0.15);
-          border: 1px solid rgba(102, 126, 234, 0.3);
+          color: $buttonColor;
+          background-color: $buttonBackground;
+          border: 1px solid $buttonBorder;
           padding: 0.4rem 1.2rem;
           border-radius: 18px;
           font-weight: 500;
+          box-shadow: -4px 6px 5px  rgb(37, 37, 37);
+
         }
       }
       button {
         @include flexing(row, end, center);
-        color: #a5b4fc;
-        background-color: rgba(102, 126, 234, 0.15);
-        border: 1px solid rgba(102, 126, 234, 0.3);
+        color: $buttonColor;
+        background-color: $buttonBackground;
+        border: 1px solid $buttonBorder;
         padding: 0.7rem 1rem;
         border-radius: 15px;
         font-weight: 500;
         font-size: 1.3rem;
         gap: 0.4rem;
+        box-shadow: -4px 6px 5px  rgb(37, 37, 37);
+        transition: box-shadow .2s ease;
+        cursor: pointer;
+        &:hover {
+          box-shadow: -4px 14px 10px  rgb(37, 37, 37);
+        }
         img {
           width: 1.6rem;
           height: 1.6rem;

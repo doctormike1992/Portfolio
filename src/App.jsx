@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <Stars />
+      {/* <Stars /> */}
       <Intro />
       <About />
       <Skills />

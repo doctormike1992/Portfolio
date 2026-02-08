@@ -24,8 +24,15 @@ export default function Projects() {
         ></motion.div>
       </div>
 
-      <motion.div id="projectsContainer">
-        <motion.div className="project">
+      <div id="projectsContainer">
+        <motion.div
+          initial={{ y: 0, opacity: 0 }}
+          whileInView={{ opacity: 1, duration: 1.3 }}
+          transition={{ ease: "easeOut" }}
+          viewport={{ once: true }}
+          whileHover={{ y: -20, duration: 0.1 }}
+          className="project"
+        >
           <h1>Tech E-shop</h1>
           <p>
             Implemented an e-commerce application with authentication, user
@@ -37,13 +44,24 @@ export default function Projects() {
             <span>Tailwind</span>
             <span>Firebase</span>
           </div>
-          <button>
+          <motion.button
+            initial={{ y: 0 }}
+            whileHover={{ y: -10 }}
+            transition={{ ease: "ease", duration: 0.1 }}
+          >
             <img src={link} alt="external link logo" />
             Live Demo
-          </button>
+          </motion.button>
         </motion.div>
 
-        <motion.div className="project">
+        <motion.div
+          initial={{ y: 0, opacity: 0 }}
+          whileInView={{ opacity: 1, duration: 1.3 }}
+          transition={{ ease: "easeOut" }}
+          viewport={{ once: true }}
+          whileHover={{ y: -20, duration: 0.1 }}
+          className="project"
+        >
           <h1>Front-End Only E-Shop</h1>
           <p>
             Developed an e-commerce frontend with vanilla JavaScript,
@@ -56,13 +74,24 @@ export default function Projects() {
             <span>Javascript</span>
             <span>Fetch API</span>
           </div>
-          <button>
+          <motion.button
+            initial={{ y: 0 }}
+            whileHover={{ y: -10 }}
+            transition={{ ease: "ease", duration: 0.1 }}
+          >
             <img src={link} alt="external link logo" />
             Live Demo
-          </button>
+          </motion.button>
         </motion.div>
 
-        <motion.div className="project">
+        <motion.div
+          initial={{ y: 0, opacity: 0 }}
+          whileInView={{ opacity: 1, duration: 1.3 }}
+          transition={{ ease: "easeOut" }}
+          viewport={{ once: true }}
+          whileHover={{ y: -20, duration: 0.1 }}
+          className="project"
+        >
           <h1>Netflix Home Page Clone</h1>
           <p>
             Netflix-style frontend clone with dynamic content rendering and
@@ -74,12 +103,16 @@ export default function Projects() {
             <span>Javascript</span>
             <span>Fetch API</span>
           </div>
-          <button>
+          <motion.button
+            initial={{ y: 0 }}
+            whileHover={{ y: -10 }}
+            transition={{ ease: "ease", duration: 0.1 }}
+          >
             <img src={link} alt="external link logo" />
             Live Demo
-          </button>
+          </motion.button>
         </motion.div>
-      </motion.div>
+      </div>
     </motion.section>
   );
 }
