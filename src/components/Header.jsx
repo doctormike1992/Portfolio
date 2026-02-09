@@ -80,7 +80,7 @@ export default function Header() {
           <a
             className={nav ? "openA" : "closeA"}
             style={{ transitionDelay: "0.3s" }}
-            href=""
+            href="#projects"
           >
             Projects
           </a>
@@ -110,7 +110,7 @@ export default function Header() {
         <nav className="openNav">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
-          <a href="">Projects</a>
+          <a href="#projects">Projects</a>
           <a href="">Education</a>
           <a href="">Clarifications</a>
           <a href="">Contact</a>

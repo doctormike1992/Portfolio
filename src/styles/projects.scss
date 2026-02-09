@@ -103,8 +103,7 @@ $background: (
         }
       }
       button {
-        @include flexing(row, end, center);
-        color: $buttonColor;
+   
         background-color: $buttonBackground;
         border: 1px solid $buttonBorder;
         padding: 0.7rem 1rem;
@@ -117,6 +116,10 @@ $background: (
         cursor: pointer;
         &:hover {
           box-shadow: -4px 14px 10px  rgb(37, 37, 37);
+        }
+        a{
+        @include flexing(row, end, center);
+        color: $buttonColor; 
         }
         img {
           width: 1.6rem;

@@ -30,7 +30,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, duration: 1.3 }}
           transition={{ ease: "easeOut" }}
           viewport={{ once: true }}
-          whileHover={{ y: -20, duration: 0.1 }}
+          whileHover={{ y: -10, duration: 0.1 }}
           className="project"
         >
           <h1>Tech E-shop</h1>
@@ -46,11 +46,13 @@ export default function Projects() {
           </div>
           <motion.button
             initial={{ y: 0 }}
-            whileHover={{ y: -10 }}
+            whileHover={{ y: -5 }}
             transition={{ ease: "ease", duration: 0.1 }}
           >
-            <img src={link} alt="external link logo" />
-            Live Demo
+            <a href="https://tech-shop-1axp.vercel.app/" target="_blank">
+              <img src={link} alt="external link logo" />
+              Live Demo
+            </a>
           </motion.button>
         </motion.div>
 
@@ -59,7 +61,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, duration: 1.3 }}
           transition={{ ease: "easeOut" }}
           viewport={{ once: true }}
-          whileHover={{ y: -20, duration: 0.1 }}
+          whileHover={{ y: -10, duration: 0.1 }}
           className="project"
         >
           <h1>Front-End Only E-Shop</h1>
@@ -76,11 +78,16 @@ export default function Projects() {
           </div>
           <motion.button
             initial={{ y: 0 }}
-            whileHover={{ y: -10 }}
+            whileHover={{ y: -5 }}
             transition={{ ease: "ease", duration: 0.1 }}
           >
-            <img src={link} alt="external link logo" />
-            Live Demo
+            <a
+              href="https://eshop-project-doctormike1992s-projects.vercel.app/"
+              target="_blank"
+            >
+              <img src={link} alt="external link logo" />
+              Live Demo
+            </a>
           </motion.button>
         </motion.div>
 
@@ -89,7 +96,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, duration: 1.3 }}
           transition={{ ease: "easeOut" }}
           viewport={{ once: true }}
-          whileHover={{ y: -20, duration: 0.1 }}
+          whileHover={{ y: -10, duration: 0.1 }}
           className="project"
         >
           <h1>Netflix Home Page Clone</h1>
@@ -105,11 +112,16 @@ export default function Projects() {
           </div>
           <motion.button
             initial={{ y: 0 }}
-            whileHover={{ y: -10 }}
+            whileHover={{ y: -5 }}
             transition={{ ease: "ease", duration: 0.1 }}
           >
-            <img src={link} alt="external link logo" />
-            Live Demo
+            <a
+              href="https://netflix-clone-project-p78h.vercel.app/"
+              target="_blank"
+            >
+              <img src={link} alt="external link logo" />
+              Live Demo
+            </a>
           </motion.button>
         </motion.div>
       </div>
