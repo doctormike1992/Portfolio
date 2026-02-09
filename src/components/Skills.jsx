@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 const container = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: .02 } },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: .02 } },
 };
 const items = {
   hidden: { opacity: 0, y: 10 },
