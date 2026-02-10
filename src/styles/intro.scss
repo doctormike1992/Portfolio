@@ -164,7 +164,7 @@
       text-align: center;
       box-shadow: 0 0 8px 0px #667eea;
       cursor: pointer;
-      transition: all 0.2s ease-in-out;
+      transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
       &:hover {
         box-shadow: 0 0 15px #667eea;
         transform: translateY(-5%);
@@ -186,7 +186,7 @@
         background: rgba(128, 128, 128, 0.356);
         border: 0.1rem solid rgba(255, 255, 255, 0.418);
         border-radius: 50%;
-        transition: all 0.2s ease-out;
+        transition: transform 0.2s ease-out, background 0.2s ease-out, border 0.2s ease-out;
         &:hover {
           transform: translateY(-15%);
           background: #667eea4b;

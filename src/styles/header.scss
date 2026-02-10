@@ -18,7 +18,7 @@ $h1Background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
   transition: all 0.2s ease;
   top: 0;
   h1 {
-    transition: all 0.1s ease-in-out;
+    transition: scale 0.1s ease-in-out;
   }
   h1:hover {
     scale: 1.1;
@@ -54,7 +54,7 @@ $h1Background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
         content: "";
         position: absolute;
         bottom: -20%;
-        transition: all 0.2s ease-in-out;
+        transition: width 0.2s ease-in-out;
         width: 0;
         height: 2px;
         background: $h1Background;

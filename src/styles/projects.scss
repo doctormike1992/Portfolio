@@ -57,7 +57,7 @@ $background: (
     .project {
       @include flexing(column, start, start);
       border-radius: 12px;
-      width: 25rem;
+      max-width: 25rem;
       height: 30rem;
       padding: 2rem;
       position: relative;
@@ -71,6 +71,9 @@ $background: (
       &:hover {
         filter: brightness(1.1);
         background-size: 100%;
+      }
+      @media screen and (max-width: 425px) {
+      margin: 0 5px;       
       }
 
       h1 {
