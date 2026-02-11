@@ -6,6 +6,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Courses from './components/Courses'
+import GetInTouch from './components/GetInTouch';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Projects />
       <Education />
       <Courses />
+      <GetInTouch />
     </>
   );
 }

@@ -1,0 +1,116 @@
+$h1Background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+$underlineBackground: linear-gradient(
+  45deg,
+  #667eea,
+  #764ba2,
+  rgb(109, 28, 98)
+);
+
+@mixin flexing($row, $justify) {
+  display: flex;
+  flex-direction: $row;
+  align-items: center;
+  justify-content: $justify;
+}
+
+#getInTouch {
+  width: 100%;
+  @include flexing(column, center);
+  margin-top: 10%;
+  #getInTouchHeader {
+    @include flexing(column, center);
+    h1 {
+      background: $h1Background;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 3rem;
+      text-align: center;
+    }
+    #underline {
+      height: 0.2rem;
+      background: $underlineBackground;
+      margin-top: 1rem;
+    }
+  }
+  #getInTouchDiv {
+    @include flexing(column, center);
+    max-width: 870px;
+    margin-top: 4rem;
+    margin-left: 4px;
+    margin-right: 4px;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    p {
+      color: #a1a1aa;
+      font-size: 1.125rem;
+      line-height: 1.8;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    .getDivs {
+      display: flex;
+      gap: 2rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: start;
+      width: 100%;
+      background: linear-gradient(
+        to left,
+        rgba(29, 29, 29, 0.644) 30%,
+        rgba(255, 255, 255, 0.158) 50%,
+        #0a0e22dc 65%
+      );
+      background-size: 300%;
+      background-position: right 100%;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      border: 1px solid rgba(128, 128, 128, 0.171);
+      padding: 1.7rem;
+      text-decoration: none;
+      transition:
+        background-position 0.3s linear,
+        border 0.4s ease,
+        transform 0.3s ease-out;
+      cursor: pointer;
+      &:hover {
+        background-position: left 100%;
+        transform: translateX(1%);
+        span {
+          rotate: 10deg;
+        }
+      }
+      span {
+        transition: rotate 0.4s ease;
+        padding: 1rem;
+        border-radius: 20px;
+        background: linear-gradient(
+          135deg,
+          rgba(102, 126, 234, 0.2) 0%,
+          rgba(118, 75, 162, 0.2) 100%
+        );
+        img {
+          aspect-ratio: 1/1;
+          width: 3rem;
+          display: block;
+        }
+      }
+      div {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+        .infoName {
+          font-size: 0.875rem;
+          font-weight: 500;
+          letter-spacing: 1px;
+        }
+        .infoData {
+          color: white;
+          font-weight: 500;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
