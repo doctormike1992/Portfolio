@@ -36,8 +36,8 @@ export default function Intro() {
             <img src={Loc} alt="location svg" />
             Athens, Greece
           </div>
-          <div id="getInTouch">
-            <a href="">Get in Touch</a>
+          <div id="inTouchButton">
+            <a href="#getInTouch">Get in Touch</a>
           </div>
           <div id="icons">
             <div className="icon">

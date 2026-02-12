@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Courses from './components/Courses'
 import GetInTouch from './components/GetInTouch';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <Education />
       <Courses />
       <GetInTouch />
+      <Footer />
     </>
   );
 }

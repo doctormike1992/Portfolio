@@ -4,6 +4,9 @@ import { motion } from "motion/react";
 import email from "../assets/email2.svg";
 import location from "../assets/location2.svg";
 import phone from "../assets/phone2.svg";
+import github from "../assets/github.svg";
+import linkedin from "../assets/linkedin2.svg";
+import download from "../assets/download.svg";
 
 export default function GetInTouch() {
   return (
@@ -30,7 +33,20 @@ export default function GetInTouch() {
           I'm currently looking for new opportunities. Whether you have a
           question or just want to say hi, feel free to reach out!
         </p>
-        <a className="getDivs" href="mailto:mixpri13@gmail.com">
+        <motion.a
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 1, ease: "easeOut", delay: 0.1 },
+          }}
+          whileHover={{
+            x: 10,
+            transition: { duration: 0.2, ease: "easeInOut" },
+          }}
+          className="getDivs"
+          href="mailto:mixpri13@gmail.com"
+        >
           <span>
             <img src={email} alt="email icon" />
           </span>
@@ -39,8 +55,21 @@ export default function GetInTouch() {
             <p className="infoName">Email</p>
             <p className="infoData">mixpri13@gmail.com</p>
           </div>
-        </a>
-        <a className="getDivs" href="tel:+306977129051">
+        </motion.a>
+        <motion.a
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 1, ease: "easeOut", delay: 0.3 },
+          }}
+          whileHover={{
+            x: 10,
+            transition: { duration: 0.2, ease: "easeInOut" },
+          }}
+          className="getDivs"
+          href="tel:+306977129051"
+        >
           <span>
             <img src={phone} alt="phone icon" />
           </span>
@@ -49,8 +78,20 @@ export default function GetInTouch() {
             <p className="infoName">Phone</p>
             <p className="infoData">6977129051</p>
           </div>
-        </a>
-        <a className="getDivs">
+        </motion.a>
+        <motion.a
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 1, ease: "easeOut", delay: 0.5 },
+          }}
+          whileHover={{
+            x: 10,
+            transition: { duration: 0.2, ease: "easeInOut" },
+          }}
+          className="getDivs"
+        >
           <span>
             <img src={location} alt="location icon" />
           </span>
@@ -59,21 +100,22 @@ export default function GetInTouch() {
             <p className="infoName">Location</p>
             <p className="infoData">Athens, Greece</p>
           </div>
-        </a>
-        <a id="infoButtons">
-          <button>
-            <img src="" alt="" />
+        </motion.a>
+        <div id="infoButtons">
+          <a href="https://github.com/doctormike1992" target="_blank">
+            <img src={github} alt="github logo" />
             GitHub
-          </button>
-          <button>
-            <img src="" alt="" />
+          </a>
+
+          <a href="https://www.linkedin.com/in/%CE%BC%CE%B9%CF%87%CE%B1%CE%BB%CE%B7%CF%82-%CF%80%CF%81%CE%B9%CF%86%CF%84%CE%B7%CF%82-110005323/" target="_blank">
+            <img src={linkedin} alt="linkedin logo" />
             Linkedin
-          </button>
-        </a>
-        <button id="resume">
-          <img src="" alt="download icon" />
+          </a>
+        </div>
+        <a href="/Mixalis-Priftis-CV.pdf" download id="resume">
+          <img src={download} alt="download icon" />
           Download Resume
-        </button>
+        </a>
       </div>
     </motion.section>
   );

@@ -28,7 +28,7 @@ export default function Projects() {
         <motion.div
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ opacity: 1, duration: 1.3 }}
-          transition={{ ease: "easeOut" }}
+          transition={{ ease: "easeOut", delay: 0.25 }}
           viewport={{ once: true }}
           whileHover={{ y: -10, duration: 0.1 }}
           className="project"
@@ -59,7 +59,7 @@ export default function Projects() {
         <motion.div
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ opacity: 1, duration: 1.3 }}
-          transition={{ ease: "easeOut" }}
+          transition={{ ease: "easeOut", delay: 0.25 }}
           viewport={{ once: true }}
           whileHover={{ y: -10, duration: 0.1 }}
           className="project"
@@ -94,7 +94,7 @@ export default function Projects() {
         <motion.div
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ opacity: 1, duration: 1.3 }}
-          transition={{ ease: "easeOut" }}
+          transition={{ ease: "easeOut", delay: 0.25 }}
           viewport={{ once: true }}
           whileHover={{ y: -10, duration: 0.1 }}
           className="project"

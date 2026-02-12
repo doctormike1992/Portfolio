@@ -94,14 +94,14 @@ export default function Header() {
           <a
             className={nav ? "openA" : "closeA"}
             style={{ transitionDelay: "0.5s" }}
-            href=""
+            href="#courses"
           >
             Clarifications
           </a>
           <a
             className={nav ? "openA" : "closeA"}
             style={{ transitionDelay: "0.6s" }}
-            href=""
+            href="#getInTouch"
           >
             Contact
           </a>
@@ -112,8 +112,8 @@ export default function Header() {
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#education">Education</a>
-          <a href="">Clarifications</a>
-          <a href="">Contact</a>
+          <a href="#courses">Clarifications</a>
+          <a href="#getInTouch">Contact</a>
         </nav>
       )}
     </header>

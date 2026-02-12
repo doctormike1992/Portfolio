@@ -154,8 +154,8 @@
       }
     }
 
-    #getInTouch {
-      margin: clamp(1.8rem,2vw,3rem) 0;
+    #inTouchButton {
+      margin: clamp(1.8rem,2vw,3rem);
       font-size: clamp(0.9rem, 5vw, 1.4rem);
       font-weight: 600;
       background: linear-gradient(135deg, #667eea, #764ba2);
@@ -183,13 +183,13 @@
         cursor: pointer;
         width: 3rem;
         height: 3rem;
-        background: rgba(128, 128, 128, 0.356);
+        background-color: rgba(128, 128, 128, 0.356);
         border: 0.1rem solid rgba(255, 255, 255, 0.418);
         border-radius: 50%;
-        transition: transform 0.2s ease-out, background 0.2s ease-out, border 0.2s ease-out;
+        transition: transform 0.2s ease-out, background-color 0.2s ease-out, border 0.2s ease-out;
         &:hover {
           transform: translateY(-15%);
-          background: #667eea4b;
+          background-color: #667eea4b;
           border: 0.1rem solid #667eea;
         }
         a {

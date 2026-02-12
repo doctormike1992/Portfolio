@@ -23,19 +23,29 @@ export default function About() {
         ></motion.div>
       </div>
       <div id="aboutPara">
-        <p>
+        <motion.p
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.25 }}
+        >
           I’m a junior front-end developer who enjoys building responsive
           websites and small web applications using HTML, CSS, JavaScript, and
           React. I like turning ideas and designs into clean, usable interfaces
           and constantly improving my code as I learn.
-        </p>
-        <p>
+        </motion.p>
+        <motion.p
+          initial={{ y: 40, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.25 }}
+        >
           I’m also a Computer Science student, building a strong foundation in
           programming while working on real projects for my portfolio. I’m
           currently looking for my first front-end role in Greece, where I can
           gain hands-on experience, collaborate with a team, and grow as a
           developer.
-        </p>
+        </motion.p>
       </div>
     </motion.section>
   );
