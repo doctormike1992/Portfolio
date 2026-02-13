@@ -14,6 +14,7 @@ $underlineBackground: linear-gradient(
 }
 
 #getInTouch {
+  scroll-margin-top: 40vh;
   width: 100%;
   @include flexing(column, center);
   margin-top: 10%;
@@ -67,7 +68,7 @@ $underlineBackground: linear-gradient(
       background-repeat: no-repeat;
       border-radius: 20px;
       border: 1px solid rgba(128, 128, 128, 0.171);
-      padding: 1rem clamp(.7rem,3vw,1.7rem);
+      padding: 1rem clamp(0.7rem, 3vw, 1.7rem);
       text-decoration: none;
       transition:
         background-position 0.3s linear,
@@ -91,7 +92,7 @@ $underlineBackground: linear-gradient(
         );
         img {
           aspect-ratio: 1/1;
-          width: clamp(2rem,3vw,3rem);
+          width: clamp(2rem, 3vw, 3rem);
           display: block;
         }
       }
@@ -112,33 +113,36 @@ $underlineBackground: linear-gradient(
         }
       }
     }
-    #infoButtons{
-      @include flexing(row,center );
-      gap: clamp(1rem,3vw,3rem);
-      a{
+    #infoButtons {
+      @include flexing(row, center);
+      gap: clamp(1rem, 3vw, 3rem);
+      a {
         text-decoration: none;
-      @include flexing(row,center );
-      gap: .7rem;
-      color: white;
-      background: rgba(128, 128, 128, 0.356);
-      border: 0.1rem solid rgba(255, 255, 255, 0.418);
-      border-radius: 30px;
-      padding: 18px 30px;
-      cursor: pointer;
-      transition: transform 0.2s ease-out, background-color 0.2s ease-out, border 0.2s ease-out;
+        @include flexing(row, center);
+        gap: 0.7rem;
+        color: white;
+        background: rgba(128, 128, 128, 0.356);
+        border: 0.1rem solid rgba(255, 255, 255, 0.418);
+        border-radius: 30px;
+        padding: 18px 30px;
+        cursor: pointer;
+        transition:
+          transform 0.2s ease-out,
+          background-color 0.2s ease-out,
+          border 0.2s ease-out;
         &:hover {
           transform: translateY(-15%);
           background-color: #667eea4b;
           border: 0.1rem solid #667eea;
         }
-        img{
+        img {
           aspect-ratio: 1/1;
           width: 1.2rem;
         }
       }
     }
-    #resume{
-      margin: clamp(1.8rem,2vw,3rem);
+    #resume {
+      margin: clamp(1.8rem, 2vw, 3rem);
       display: flex;
       flex-direction: row;
       align-items: end;
@@ -156,12 +160,14 @@ $underlineBackground: linear-gradient(
       border: none;
       box-shadow: 0 0 8px 0px #667eea;
       cursor: pointer;
-      transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+      transition:
+        box-shadow 0.2s ease-in-out,
+        transform 0.2s ease-in-out;
       &:hover {
         box-shadow: 0 0 15px #667eea;
         transform: translateY(-5%);
       }
-      img{
+      img {
         aspect-ratio: 1/1;
         width: 1.5rem;
       }

@@ -15,6 +15,7 @@ $underlineBackground: linear-gradient(
 
 #courses {
   width: 100%;
+  scroll-margin-top: 40vh;
   place-items: center;
   margin-top: 10%;
   #coursesHeader {
@@ -40,7 +41,7 @@ $underlineBackground: linear-gradient(
     margin-left: 4px;
     margin-right: 4px;
     gap: 2rem;
-    padding: 1.5rem clamp(2rem,3vw,6.5rem);
+    padding: 1.5rem clamp(2rem, 3vw, 6.5rem);
     border-radius: 15px;
     background: #0a0e22dc;
     border: 1px solid rgba(128, 128, 128, 0.171);
@@ -82,7 +83,7 @@ $underlineBackground: linear-gradient(
       gap: 1rem;
       #seminar {
         color: white;
-        font-size: clamp(1.1rem,2vw,1.5rem);
+        font-size: clamp(1.1rem, 2vw, 1.5rem);
         font-weight: 700;
       }
 
@@ -96,7 +97,7 @@ $underlineBackground: linear-gradient(
           color: #a5b4fc;
           font-size: clamp(0.8rem, 3vw, 1rem);
           font-weight: 500;
-          padding: 0.5rem clamp(0.7rem,3vw,1rem);
+          padding: 0.5rem clamp(0.7rem, 3vw, 1rem);
           display: flex;
           img {
             width: 1.1rem;
