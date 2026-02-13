@@ -8,6 +8,15 @@ import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin2.svg";
 import download from "../assets/download.svg";
 
+const container = {
+  hidden: { opacity: 0},
+  visible: {opacity: 1, transition: { staggerChildren: 0.3, delayChildren: .4 } }
+}
+const items = {
+  hidden: { opacity: 0, x: -40},
+  visible: {opacity: 1, x: 0, ease: 'easeOut', duration: 1.1 }
+}
+
 export default function GetInTouch() {
   return (
     <motion.section
@@ -28,18 +37,18 @@ export default function GetInTouch() {
         ></motion.div>
       </div>
 
-      <div id="getInTouchDiv">
+      <motion.div
+        variants={container}
+        initial='hidden'
+        whileInView='visible'
+        viewport={{ once: true }}
+        id="getInTouchDiv">
         <p>
           I'm currently looking for new opportunities. Whether you have a
           question or just want to say hi, feel free to reach out!
         </p>
         <motion.a
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-            transition: { duration: 1, ease: "easeOut", delay: 0.1 },
-          }}
+          variants={items}
           whileHover={{
             x: 10,
             transition: { duration: 0.2, ease: "easeInOut" },
@@ -57,12 +66,7 @@ export default function GetInTouch() {
           </div>
         </motion.a>
         <motion.a
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-            transition: { duration: 1, ease: "easeOut", delay: 0.3 },
-          }}
+         variants={items}
           whileHover={{
             x: 10,
             transition: { duration: 0.2, ease: "easeInOut" },
@@ -80,12 +84,7 @@ export default function GetInTouch() {
           </div>
         </motion.a>
         <motion.a
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-            transition: { duration: 1, ease: "easeOut", delay: 0.5 },
-          }}
+          variants={items}
           whileHover={{
             x: 10,
             transition: { duration: 0.2, ease: "easeInOut" },
@@ -116,7 +115,7 @@ export default function GetInTouch() {
           <img src={download} alt="download icon" />
           Download Resume
         </a>
-      </div>
+      </motion.div>
     </motion.section>
   );
 }

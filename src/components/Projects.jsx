@@ -26,11 +26,18 @@ export default function Projects() {
 
       <div id="projectsContainer">
         <motion.div
-          initial={{ y: 0, opacity: 0 }}
-          whileInView={{ opacity: 1, duration: 1.3 }}
-          transition={{ ease: "easeOut", delay: 0.25 }}
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{
+            y:0,
+            opacity: 1,
+            duration: 1.8,
+            transition: { ease: "easeOut", delay: 0.2 },
+          }}
           viewport={{ once: true }}
-          whileHover={{ y: -10, duration: 0.1 }}
+          whileHover={{
+            y: -10,
+            transition: { duration: 0.3, ease: "easeOut" },
+          }}
           className="project"
         >
           <h1>Tech E-shop</h1>
@@ -57,11 +64,18 @@ export default function Projects() {
         </motion.div>
 
         <motion.div
-          initial={{ y: 0, opacity: 0 }}
-          whileInView={{ opacity: 1, duration: 1.3 }}
-          transition={{ ease: "easeOut", delay: 0.25 }}
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            duration: 1.8,
+            transition: { ease: "easeOut", delay: 0.3 },
+          }}
           viewport={{ once: true }}
-          whileHover={{ y: -10, duration: 0.1 }}
+          whileHover={{
+            y: -10,
+            transition: { duration: 0.3, ease: "easeOut" },
+          }}
           className="project"
         >
           <h1>Front-End Only E-Shop</h1>
@@ -79,7 +93,7 @@ export default function Projects() {
           <motion.button
             initial={{ y: 0 }}
             whileHover={{ y: -5 }}
-            transition={{ ease: "ease", duration: 0.1 }}
+            transition={{ ease: "ease", duration: 0.5 }}
           >
             <a
               href="https://eshop-project-doctormike1992s-projects.vercel.app/"
@@ -92,11 +106,18 @@ export default function Projects() {
         </motion.div>
 
         <motion.div
-          initial={{ y: 0, opacity: 0 }}
-          whileInView={{ opacity: 1, duration: 1.3 }}
-          transition={{ ease: "easeOut", delay: 0.25 }}
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            duration: 1.8,
+            transition: { ease: "easeOut", delay: 0.4 },
+          }}
           viewport={{ once: true }}
-          whileHover={{ y: -10, duration: 0.1 }}
+          whileHover={{
+            y: -10,
+            transition: { duration: 0.3, ease: "easeOut" },
+          }}
           className="project"
         >
           <h1>Netflix Home Page Clone</h1>
