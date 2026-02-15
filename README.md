@@ -1,16 +1,45 @@
-# React + Vite
+# 🚀 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive portfolio website built to showcase my projects, skills, and experience as a Front-End Developer.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [View Live Site]([https://your-live-link.com](https://portfolio-xi-black-23.vercel.app/))
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 About The Project
 
-## Expanding the ESLint configuration
+This portfolio website was built to present my work, technical skills, and contact information in a clean and interactive way.  
+It includes smooth animations, responsive design, and optimized performance for all screen sizes.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The goal of this project was to create a professional online presence while applying modern front-end development practices.
+
+---
+
+## 🛠️ Built With
+
+- HTML5
+- CSS3 / SCSS
+- JavaScript (ES6+)
+- React
+- Framer Motion
+- Responsive Design
+- Git & GitHub
+
+---
+
+## ✨ Features
+
+- 🎨 Modern UI Design
+- 📱 Fully Responsive (Mobile, Tablet, Desktop)
+- ⚡ Smooth Scroll Animations
+- 🎬 Interactive Animations with Framer Motion
+- 🧩 Reusable Components
+- 📂 Projects Section with Detailed Descriptions
+- 📄 Downloadable Resume
+- 📬 Contact Section
+
+---
+
+## 📂 Project Structure
