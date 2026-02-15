@@ -67,6 +67,7 @@ export default function Header() {
             className={nav ? "openA" : "closeA"}
             style={{ transitionDelay: "0.1s" }}
             href="#about"
+            onClick={() => setNav(false)}
           >
             About
           </a>
@@ -74,6 +75,7 @@ export default function Header() {
             className={nav ? "openA" : "closeA"}
             style={{ transitionDelay: "0.2s" }}
             href="#skills"
+            onClick={() => setNav(false)}
           >
             Skills
           </a>
@@ -81,6 +83,7 @@ export default function Header() {
             className={nav ? "openA" : "closeA"}
             style={{ transitionDelay: "0.3s" }}
             href="#projects"
+            onClick={() => setNav(false)}
           >
             Projects
           </a>
@@ -88,6 +91,7 @@ export default function Header() {
             className={nav ? "openA" : "closeA"}
             style={{ transitionDelay: "0.4s" }}
             href="#education"
+            onClick={() => setNav(false)}
           >
             Education
           </a>
@@ -95,6 +99,7 @@ export default function Header() {
             className={nav ? "openA" : "closeA"}
             style={{ transitionDelay: "0.5s" }}
             href="#courses"
+            onClick={() => setNav(false)}
           >
             Clarifications
           </a>
@@ -102,6 +107,7 @@ export default function Header() {
             className={nav ? "openA" : "closeA"}
             style={{ transitionDelay: "0.6s" }}
             href="#getInTouch"
+            onClick={() => setNav(false)}
           >
             Contact
           </a>
