@@ -4,7 +4,7 @@ A modern and responsive portfolio website built to showcase my projects, skills,
 
 ## 🌐 Live Demo
 
-👉 [View Live Site]([https://your-live-link.com](https://portfolio-xi-black-23.vercel.app/))
+👉 [View Live Site]([https://your-live-link.com](https://portfolio-xi-black-23.vercel.app/)
 
 ---
 
